@@ -1,0 +1,16 @@
+# Render.com 部署描述（免费层）
+# 用法：把本目录（含 server.js / 认识正比-课堂服务器.js / 认识正比-实时互动课堂.html / package.json）推到 GitHub，
+#       然后在 Render 新建 Web Service 连该仓库，或直接使用此文件「Deploy」。
+services:
+  - type: web
+    name: zhengbi-classroom
+    runtime: node
+    plan: free
+    region: oregon          # 免费层可选区域；可改 singapore 等就近
+    branch: main
+    buildCommand: "echo skip-build"      # 纯 Node 内置模块，无需安装依赖
+    startCommand: "node server.js"
+    healthCheckPath: "/"
+    envVars:
+      - key: PORT
+        value: "10000"                  # Render 会注入真实 PORT；此处为占位

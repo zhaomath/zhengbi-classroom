@@ -1,0 +1,13 @@
+{
+  "name": "zhengbi-classroom",
+  "version": "1.5.0",
+  "description": "认识正比例·实时互动课堂（教师端+学生平板端，单文件零依赖，含跨设备中继服务器）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
